@@ -1,0 +1,7 @@
+{
+  "name": "AiChatBot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
