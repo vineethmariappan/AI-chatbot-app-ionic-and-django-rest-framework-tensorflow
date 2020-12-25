@@ -6,9 +6,9 @@ import { message } from '../models/message.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ChatService {
+export class ChatService {  
   messages=[];
-  baseurl="http://127.0.0.1:8000";
+  baseurl="http://192.168.0.103:8000";
   httpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
   constructor(private http : HttpClient) { }
   sendMessage(msg : message):Observable<any>{

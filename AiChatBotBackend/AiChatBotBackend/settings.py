@@ -25,8 +25,11 @@ SECRET_KEY = '^l%1fhdl88+ob(t=v*qi3(94jzvi8zy9+(la&@qm^4t%sj5ao2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["192.168.0.103"]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost',
+#     'http://192.168.0.103'
+# ]
 CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
@@ -42,6 +45,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -49,8 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'AiChatBotBackend.urls'

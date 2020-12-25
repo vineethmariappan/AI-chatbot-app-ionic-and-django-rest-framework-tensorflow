@@ -49,7 +49,7 @@ sendMessage(){
   this.scroll();
   this.chatApi.sendMessage(this.UserMsg).subscribe(response =>{
     setTimeout(() =>{
-      this.messages.push({user:"Friend",msg: response.message, createdAt: new Date().getTime()});
+      this.messages.push({user:"Simba",msg: response.message, createdAt: new Date().getTime()});
       this.scroll();
   },250);
   });
